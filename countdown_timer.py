@@ -5,11 +5,11 @@ import time
 
 # Instance of tkinter and label the top
 root = Tk()
-root.title('Countdown to the start of the 2021-22 NBA Season!')
+root.title('NBA Countdown')
 # Styling the label widget for the displayed clock
 lbl = Label(root, font = ('calibri', 40, 'bold'),
-            background = 'black',
-            foreground = 'white')
+            background = 'white smoke',
+            foreground = 'black')
 
 # establish the times needed
 season_start = "2021-10-19 18:30:00"
@@ -28,7 +28,9 @@ def countdown():
     time_to_season_minutes = (time_to_season_seconds % 3600) // 60
     time_to_season_seconds = time_to_season_seconds % 60
 
-    countdown_formatted = f"{time_to_season_days} days {time_to_season_hours} hours {time_to_season_minutes} minutes {time_to_season_seconds} seconds"
+    countdown_formatted = (
+        f"{time_to_season_days} days \n {time_to_season_hours} hours \n {time_to_season_minutes} minutes \n {time_to_season_seconds} seconds "
+    )
     
     lbl.config(text = countdown_formatted)
     lbl.after(1000, countdown)
