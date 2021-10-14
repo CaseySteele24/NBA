@@ -1,2 +1,2 @@
 # NBA
-All things NBA
+NBA projects I do for funsies
