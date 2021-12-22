@@ -1,0 +1,3 @@
+[submodule "NBA-Scrapers"]
+	path = NBA-Scrapers
+	url = https://github.com/CaseySteele24/NBA-Scrapers.git
