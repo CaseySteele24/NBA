@@ -11,16 +11,16 @@
      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
 
     {% if title %}
-        <title>Wanderlust Posts - {{ title }}</title>
+        <title>Posts - {{ title }}</title>
     {% else %}
-        <title>Wanderlust</title>
+        <title>NBA Analysis</title>
     {% endif %}
 </head>
 <body>
     <header class="site-header">
             <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
                 <div class="container">
-                <img class="navbar-brand mr-4" src=..\static\wanderlust_logo_2.PNG href="/">
+                <h4>NBA Tools</h4>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -62,12 +62,12 @@
             <!-- Uncomment below for the sidebar -->
             <div class="col-md-4">
             <div class="content-section">
-                <h3>Our Latest Quizes</h3>
+                <h3>Pages List</h3>
                 <p class='text-muted'>TITLE</p>
                 <ul class="list-group">
-                    <li class="list-group-item list-group-item-light"><a href="/solo_traveler">PAGE 1</a></li>
-                    <li class="list-group-item list-group-item-light"><a href="/weather_predictor">PAGE 2</a></li>
-                    <li class="list-group-item list-group-item-light">Quiz Coming 11/19!</li>
+                    <li class="list-group-item list-group-item-light"><a href="/">PAGE 1</a></li>
+                    <li class="list-group-item list-group-item-light"><a href="/">PAGE 2</a></li>
+                    <li class="list-group-item list-group-item-light">POST</li>
                 </ul>
                 <br>
                 <p class='text-muted'>TEXT</p>
