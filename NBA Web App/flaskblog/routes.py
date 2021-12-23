@@ -8,6 +8,7 @@ from flaskblog.models import User, Post
 from flask_login import login_user, current_user, logout_user, login_required
 import numpy as np
 import pickle
+import pandas as pd
 
 @app.route("/")
 @app.route("/home")
@@ -131,3 +132,11 @@ def delete_post(post_id):
     db.session.commit()
     flash('Your post has been deleted!', category='success')
     return redirect(url_for('home'))
+
+@app.route("/team_tracker", methods=['GET'])
+def show_stats():
+    # team_tracker = pd.read_csv(r'..\NBA-Scrapers\Against the Spread Tracker\team_tracker.csv')
+    # hawks = team_tracker[team_tracker['Team'] == 'Atlanta Hawks']
+    # hawks_covered = hawks['Total_covered']
+    # return hawks_covered
+    return render_template('team_tracker.html')
