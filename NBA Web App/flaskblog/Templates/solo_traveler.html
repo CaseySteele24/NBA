@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<left>
+
+<h1>Would You Enjoy Traveling Solo?</h1><br>
+
+<div class="content-section">
+    <form method="POST", action="{{ url_for('solo_traveler_prediction') }}">
+        On a scale from 1(low) to 5(high), how important are the following when traveling?<br><br>
+        Nightlife: <input type="number", name="nightlife", min="1", max="5", value=3> <br>
+        Tourist Attractions: <input type="number", name="attractions", min="1", max="5", value=3> <br>
+        Culinary Experiences: <input type="number", name="food", min="1", max="5", value=3> <br>
+        Experiencing Different Cultures: <input type="number", name="culture", min="1", max="5", value=3> <br>
+        Being Outdoors: <input type="number", name="outdoors", min="1", max="5", value=3> <br><br></b>
+        <input type="submit", value="Get Your Prediction"> 
+    </form>
+</div>
+</left>
+{% endblock content %}

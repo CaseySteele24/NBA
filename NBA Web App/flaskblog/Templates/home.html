@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block content %}
+    <!-- <h1>Wanderlust Posts</h1> -->
+    {% for post in posts %}
+        <article class="media content-section">
+            <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
+            <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">{{ post.author.username }}</a>
+                <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+            </div>
+            <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
+            <p class="article-content">{{ post.content }}</p>
+            </div>
+        </article>
+    {% endfor %}
+
+    <article class="media content-section">
+        <img class="rounded-circle article-img" src="..\static\profile_pics\employee_pics\casey_lake_tahoe.jpg">
+        <div class="media-body">
+        <div class="article-metadata">
+            <a class="mr-2" href="#">Casey Steele</a>
+            <small class="text-muted">2021-11-11</small>
+        </div>
+        <h2><a class="article-title" href="\solo_traveler">TITLE</a></h2>
+        <p class="article-content">TEXT</p>
+        </div>
+    </article>
+
+    <article class="media content-section">
+        <img class="rounded-circle article-img" src="..\static\profile_pics\employee_pics\casey_lake_tahoe.jpg">
+        <div class="media-body">
+        <div class="article-metadata">
+            <a class="mr-2" href="#">AUTHOR</a>
+            <small class="text-muted">DATE</small>
+        </div>
+        <h2><a class="article-title" href="\weather_predictor">TITLE</a></h2>
+        <p class="article-content">
+            TEXT
+        </p>
+        </div>
+    </article>
+{% endblock content %}

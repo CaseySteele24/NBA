@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<left>
+
+<h1>Tell Us How You Percieve Yourself and We Will Guess Your Weather Preference</h1><br>
+
+<div class="content-section">
+    <form method="POST", action="{{ url_for('weather_prediction') }}">
+        Check any of the boxes below that apply to you:<br><br>
+        <input type="checkbox", name="intelligence", value=1>
+        <label for="intelligence">I have above average intelligence</label></br>
+
+        <input type="checkbox", name="driving", value=1>
+        <label for="driving">I have above average driving ability</label></br>
+
+        <input type="checkbox", name="humor", value=1>
+        <label for="humor">I have an above average sense of humor</label></br>
+
+        <input type="checkbox", name="attractiveness", value=1>
+        <label for="atractiveness">I am above average in terms of attractiveness</label></br>
+
+        <input type="checkbox", name="creativity", value=1>
+        <label for="creativity">I have above average creativity</label></br>
+
+        <input type="checkbox", name="none", value=1>
+        <label for="none">I don't think I am above average in any of the above attributes</label></br></br></br>
+
+        <p> How introverted/extroverted would you consider yourself? </p>
+        <input type="radio" id="1" name="introversion", value=1>
+        <label for="1">Much more introverted than extroverted</label><br>
+
+        <input type="radio" id="2" name="introversion", value=1>
+        <label for="2">A little more introverted than extroverted</label><br>
+
+        <input type="radio" id="3" name="introversion", value=1>
+        <label for="3">Right in the middle (i.e., an ambivert)</label><br>
+
+        <input type="radio" id="4" name="introversion", value=1>
+        <label for="4">A little more extroverted than introverted</label><br>
+
+        <input type="radio" id="5" name="introversion", value=1>
+        <label for="5">Much more extroverted than introverted</label>
+
+        <br><br>
+        <input type="submit", value="Get Your Preference"> 
+    </form>
+</div>
+</left>
+{% endblock content %}

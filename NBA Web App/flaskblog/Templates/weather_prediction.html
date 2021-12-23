@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<body>
+    
+    <div class="return-prediction">
+        <center>
+        <h2>PREDICTION:</h2>
+        </center>
+
+        {% if data == 'Snowy' %}
+            <center>
+            <h3>Let it snow, let it snow, let it snow!</h3><br>
+            </center>
+        {% elif data == 'Rainy' %}
+            <center>
+            <h3>You like pina coladas... and getting caught in the rain</h3>
+            </center>
+        {% else %}
+            <center>
+            <h3>You enjoy the sunshine!</h3><br>
+            </center>
+
+        {% endif %}
+    </div>
+
+    {% if data == 'Snowy' %}
+        <div class="content-section">
+            <center>
+            <img src="https://media.giphy.com/media/26tneSGWphvmFlUju/giphy.gif" alt="snowy GIF"><br>
+            </center>
+            <p>Below are some of our staff's favorite snowy destinations.</p> 
+            <center>
+                <a href='https://www.expedia.com/Denver.d178254.Destination-Travel-Guides?pwaLob=wizard-package-pwa'>
+                    <img src="..\static\travel_pics\denver.jpg", alt="Denver", height=200, width=300></a>
+                <a href='https://www.expedia.com/Anchorage.d178230.Destination-Travel-Guides?pwaLob=wizard-package-pwa'>
+                    <img src="..\static\travel_pics\anchorage.jpg", alt="Anchorage", height=200, width=300></a>
+                <br><br>
+                <a href="/weather_predictor">
+                    <button>Retake Quiz</button>
+                </a>
+                <br>
+            </center>
+        </div>
+
+    {% elif data == 'Rainy' %}
+        <div class="content-section">
+            <p>You like pina coladas... and getting caught in the rain</p>
+            <center>
+                <img src="https://media.giphy.com/media/Mgq7EMQUrhcvC/giphy.gif" alt="Rain GIF">
+                <br><br>
+            </center>
+            <left>
+                <p>Below are some of our staff's favorite rainy destinations.</p>
+            </left>
+            <center>
+                <a href='https://www.expedia.com/Seattle.d178307.Destination-Travel-Guides?pwaLob=wizard-package-pwa'>
+                    <img src="..\static\travel_pics\seattle.jpg", alt="Seattle", height=200, width=300></a>
+                <a href='https://www.expedia.com/New-Orleans.d178292.Destination-Travel-Guides?pwaLob=wizard-package-pwa'>
+                    <img src="..\static\travel_pics\new_orleans.jpg", alt="New Orleans", height=200, width=300></a>
+                <br><br>
+                <a href="/weather_predictor">
+                    <button>Retake Quiz</button>
+                </a>
+                <br>
+            </center>
+        </div>
+
+    {% else %}
+        <div class="content-section">
+            <p>You love the sun so much you won't stop talking about it.</p>
+            <center>
+                <img src="https://media.giphy.com/media/IkcDOUOo1RhEA/giphy.gif" alt="Sun GIF">
+                <br><br>
+            </center>
+            <left>
+                <p>Below are some of our staff's favorite sunny destinations.</p>
+            </left>
+            <center><br>
+                <a href='https://www.expedia.com/Las-Vegas.d178276.Destination-Travel-Guides?pwaLob=wizard-package-pwa'>
+                    <img src="..\static\travel_pics\vegas.jpg", alt="Vegas", height=200, width=300></a>
+                <a href='https://www.expedia.com/Palm-Springs.d180676.Destination-Travel-Guides?pwaLob=wizard-package-pwa'>
+                    <img src="..\static\travel_pics\palm_springs.jpg", alt="Palm Springs", height=200, width=300></a>
+                <a href='https://www.expedia.com/Los-Angeles.d178280.Destination-Travel-Guides?pwaLob=wizard-package-pwa'>
+                    <img src="..\static\travel_pics\la.jpg", alt="Los Angeles", height=200, width=300></a>
+                <a href='https://www.expedia.com/Hawaii.d213.Destination-Travel-Guides?pwaLob=wizard-package-pwa'>
+                    <img src="..\static\travel_pics\hawaii.jpg", alt="Hawaii", height=200, width=300></a>
+                <br><br>
+                <a href="/weather_predictor">
+                    <button>Retake Quiz</button>
+                </a>
+                <br>
+            </center>
+        </div>
+
+    {% endif %}
+
+</body>
+
+{% endblock content %}

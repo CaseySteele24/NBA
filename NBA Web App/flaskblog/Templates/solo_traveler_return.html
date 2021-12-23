@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<body>
+    
+    <div class="return-prediction">
+        <center>
+        <h2>PREDICTION:</h2>
+        </center>
+
+        {% if data == 0 %}
+            <center>
+            <h3>You'll have more fun traveling with friends and family!</h3>
+            </center>
+        {% else %}
+            <center>
+            <h3>You would enjoy solo travel! Don't let other people hold you back!</h3>
+            </center>
+        {% endif %}
+    </div>
+
+    {% if data == 0 %}
+        <div class="content-section">
+            <p>Below are some of our staff's favorite group destinations. Click any of them to learn more about the vacation packages we have!</p> 
+            <center>
+                <a href='https://www.expedia.com/Las-Vegas.d178276.Destination-Travel-Guides?pwaLob=wizard-package-pwa'>
+                    <img src="..\static\travel_pics\vegas.jpg", alt="Vegas", height=200, width=300></a>
+                <a href='https://www.expedia.com/New-York.d178293.Destination-Travel-Guides?pwaLob=wizard-package-pwa'>
+                    <img src="..\static\travel_pics\ny.jpg", alt="New York", height=200, width=300></a>
+                <a href='https://www.expedia.com/Los-Angeles.d178280.Destination-Travel-Guides?pwaLob=wizard-package-pwa'>
+                    <img src="..\static\travel_pics\la.jpg", alt="Los Angeles", height=200, width=300></a>
+                <a href='https://www.expedia.com/Hawaii.d213.Destination-Travel-Guides?pwaLob=wizard-package-pwa'>
+                    <img src="..\static\travel_pics\hawaii.jpg", alt="Hawaii", height=200, width=300></a>
+                <br><br>
+                <a href="/solo_traveler">
+                    <button>Retake Quiz</button>
+                </a>
+                <br>
+            </center>
+        </div>
+
+    {% else %}
+        <div class="content-section">
+            <p>Below are some of our staff's favorite solo destinations. Click any of them to learn more about the vacation packages we have!</p>
+            <center>
+                <a href='https://www.expedia.com/Albrightsville-Hotels-Perfect-Weekend-Getaway-Vacation-Home-The-Poconos.h71702882.Hotel-Information'>
+                    <img src="..\static\travel_pics\poconos.jpg", alt="Poconos", height=200, width=300></a>
+                <a href='https://www.expedia.com/Grand-Canyon.d6140738.Destination-Travel-Guides?pwaLob=wizard-package-pwa'>
+                    <img src="..\static\travel_pics\grand_canyon.jpg", alt="Grand Canyon", height=200, width=300></a>
+                <br><br>
+                <a href="/solo_traveler">
+                    <button>Retake Quiz</button>
+                </a>
+                <br>
+            </center>
+        </div>
+
+    {% endif %}
+
+</body>
+
+{% endblock content %}
