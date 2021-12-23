@@ -1,2 +1,2 @@
 # NBA
-NBA projects I do for funsies
+NBA projects, scrapers, and a webapp to keep track of it all
