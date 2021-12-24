@@ -9,6 +9,7 @@ from flask_login import login_user, current_user, logout_user, login_required
 import numpy as np
 import pickle
 import pandas as pd
+from prettytable import from_csv
 
 @app.route("/")
 @app.route("/home")
@@ -135,17 +136,12 @@ def delete_post(post_id):
 
 @app.route("/team_tracker", methods=['GET'])
 def show_stats():
-    # team_tracker = pd.read_csv(r'..\NBA-Scrapers\Against the Spread Tracker\team_tracker.csv')
-    # hawks = team_tracker[team_tracker['Team'] == 'Atlanta Hawks']
-    # hawks_covered = hawks['Total_covered']
-    # return hawks_covered
-    from prettytable import from_csv
     
     with open("..\\NBA-Scrapers\\Against the Spread Tracker\\team_tracker.csv") as fp:
         mytable = from_csv(fp)
         html_code = mytable.get_html_string()
 
-        myText = open(r'C:\Users\casey\Documents\GitHub\NBA\NBA Web App\html_code.txt', 'w')
+        myText = open(r'C:\Users\casey\Documents\GitHub\NBA\NBA Web App\flaskblog\templates\html_code.txt', 'w')
         myText.write(html_code)
         myText.close()
 
