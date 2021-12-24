@@ -139,4 +139,14 @@ def show_stats():
     # hawks = team_tracker[team_tracker['Team'] == 'Atlanta Hawks']
     # hawks_covered = hawks['Total_covered']
     # return hawks_covered
+    from prettytable import from_csv
+    
+    with open("..\\NBA-Scrapers\\Against the Spread Tracker\\team_tracker.csv") as fp:
+        mytable = from_csv(fp)
+        html_code = mytable.get_html_string()
+
+        myText = open(r'C:\Users\casey\Documents\GitHub\NBA\NBA Web App\html_code.txt', 'w')
+        myText.write(html_code)
+        myText.close()
+
     return render_template('team_tracker.html')
